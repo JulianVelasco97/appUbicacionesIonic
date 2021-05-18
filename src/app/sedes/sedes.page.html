@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Puntos de Vacunación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let sedeItem of sedes">
+      <ion-item>
+        <ion-icon slot="start" name="location"></ion-icon>
+        <ion-label>
+          <h2>{{sedeItem.nombre}}</h2>
+          <p>Latitud: {{sedeItem.latitud}}</p>
+          <p>Longitud: {{sedeItem.longitud}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
